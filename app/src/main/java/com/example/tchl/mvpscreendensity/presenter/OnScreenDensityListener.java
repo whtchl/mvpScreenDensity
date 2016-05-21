@@ -1,6 +1,6 @@
 package com.example.tchl.mvpscreendensity.presenter;
 
-import com.example.tchl.mvpscreendensity.model.entity.ScreenDensity;
+/*import com.example.tchl.mvpscreendensity.model.entity.ScreenDensity;*/
 
 /**
  * Created by tchl on 2016-05-15.
@@ -10,9 +10,9 @@ public interface OnScreenDensityListener {
     /**
      * 成功时回调
      *
-     * @param screenDensity
+     *
      */
-    void onSuccess(ScreenDensity screenDensity);
+    void onSuccess();
     /**
      * 失败时回调，简单处理，没做什么
      */

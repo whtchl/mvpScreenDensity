@@ -3,7 +3,6 @@ package com.example.tchl.mvpscreendensity.presenter.impl;
 import android.util.Log;
 
 import com.example.tchl.mvpscreendensity.model.ScreenDensityModel;
-import com.example.tchl.mvpscreendensity.model.entity.ScreenDensity;
 import com.example.tchl.mvpscreendensity.model.impl.ScreenDensityModelImpl;
 import com.example.tchl.mvpscreendensity.presenter.OnScreenDensityListener;
 import com.example.tchl.mvpscreendensity.presenter.ScreenDensityPresenter;
@@ -12,7 +11,7 @@ import com.example.tchl.mvpscreendensity.ui.view.ScreenDensityView;
 /**
  * Created by tchl on 2016-05-15.
  */
-public class ScreenDensityPresenterImpl implements ScreenDensityPresenter,OnScreenDensityListener {
+public class ScreenDensityPresenterImpl implements ScreenDensityPresenter,OnScreenDensityListener {  //OnScreenDensityListener
 
     /*Presenter作为中间层，持有View和Model的引用*/
     private ScreenDensityView screenDensityView;
@@ -31,17 +30,16 @@ public class ScreenDensityPresenterImpl implements ScreenDensityPresenter,OnScre
     }
 
     @Override
-    public void onSuccess(ScreenDensity screenDensity) {
-         screenDensityView.showLoading();
-/*        weatherView.hideLoading();
-        weatherView.setWeatherInfo(weather);*/
+    public void onSuccess()  {
+        Log.d("ScreenDesityPresenterImpl","tchl onSuccess");
+        screenDensityView.showLoading();
+        screenDensityView.setScreenDensityInfo();
+
     }
 
     @Override
     public void onError() {
         screenDensityView.showError();
-/*        weatherView.hideLoading();
-        weatherView.showError();*/
     }
 
 }
